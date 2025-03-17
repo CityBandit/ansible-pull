@@ -1,0 +1,6 @@
+- name: install required packages
+  apt:
+    name: "{{item}}"
+  loop:
+    - htop
+    - tmux

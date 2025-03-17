@@ -1,0 +1,12 @@
+---
+- name: working with ansible pull
+  connection: localhost
+  hosts: localhost
+  pre_tasks:
+    - name: update package index
+      apt:
+        update_cache: yes
+        upgrade: yes
+  tasks:
+   - include_tasks: tasks/packages.yml
+
